@@ -20,10 +20,12 @@ public class DbDelete_09 {
 				final int rowCnt = statement.executeUpdate();
 				System.out.println(rowCnt + "件のレコードが削除されました。");
 			} catch (final Exception e) {
-				System.out.println("エラー発生");
+				System.err.println("エラー発生： " + e.getLocalizedMessage());
+				e.printStackTrace();
 			}
 		} catch (final Exception e) {
-			System.out.println("エラー発生");
+			System.err.println("エラー発生： " + e.getLocalizedMessage());
+			e.printStackTrace();
 		}
 	}
 

@@ -20,10 +20,12 @@ public class DbUpdate_08 {
 				final int rowCnt = statement.executeUpdate(sql);
 				System.out.println(rowCnt + "件のレコードが更新されました。");
 			} catch (final Exception e) {
-				System.out.println("エラー発生");
+				System.err.println("エラー発生： " + e.getLocalizedMessage());
+				e.printStackTrace();
 			}
 		} catch (final Exception e) {
-			System.out.println("エラー発生");
+			System.err.println("エラー発生： " + e.getLocalizedMessage());
+			e.printStackTrace();
 		}
 	}
 

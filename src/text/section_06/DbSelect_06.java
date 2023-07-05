@@ -13,16 +13,19 @@ public class DbSelect_06 {
 			try (Statement statement = con.createStatement();) {
 				final String sql = "SELECT id, name FROM users;";
 				final ResultSet result = statement.executeQuery(sql);
+				// SQLクエリの実行結果を抽出
 				while (result.next()) {
 					final int id = result.getInt("id");
 					final String name = result.getString("name");
 					System.out.println(result.getRow() + "件目：id =" + id + "/name= " + name);
 				}
 			} catch (final Exception e) {
-				System.out.println("エラー発生");
+				System.err.println("エラー発生： " + e.getLocalizedMessage());
+				e.printStackTrace();
 			}
 		} catch (final Exception e) {
-			System.out.println("エラー発生");
+			System.err.println("エラー発生： " + e.getLocalizedMessage());
+			e.printStackTrace();
 		}
 	}
 

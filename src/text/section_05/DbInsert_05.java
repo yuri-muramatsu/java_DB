@@ -24,10 +24,12 @@ public class DbInsert_05 {
 					System.out.println(rowCnt + "件のレコードが追加されました。");
 				}
 			} catch (final Exception e) {
-				System.out.println("エラー発生");
+				System.err.println("エラー発生： " + e.getLocalizedMessage());
+				e.printStackTrace();
 			}
 		} catch (final Exception e) {
-			System.out.println("エラー発生");
+			System.err.println("エラー発生： " + e.getLocalizedMessage());
+			e.printStackTrace();
 		}
 	}
 

@@ -36,13 +36,16 @@ public class DbOrderBy_10 {
 						System.out.println(result.getRow() + "件目：id＝" + id + "/name＝" + name + "/age＝" + age);
 					}
 				} catch (final Exception e) {
-					System.out.println("エラー発生");
+					System.err.println("エラー発生： " + e.getLocalizedMessage());
+					e.printStackTrace();
 				}
 			} catch (final Exception e) {
-				System.out.println("エラー発生");
+				System.err.println("エラー発生： " + e.getLocalizedMessage());
+				e.printStackTrace();
 			}
 		} catch (final Exception e) {
-			System.out.println("エラー発生");
+			System.err.println("エラー発生： " + e.getLocalizedMessage());
+			e.printStackTrace();
 		}
 	}
 
